@@ -19,7 +19,7 @@ connection.connect(err => {
 
 app.use(cors());
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     const ALL_BOOK = `SELECT * FROM buku_index`;
     connection.query(ALL_BOOK, (err, results) => {
         if (err) {
